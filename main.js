@@ -62,6 +62,9 @@ function newQuestion(){
         document.getElementById('question_index').innerHTML = qi+1;
         document.getElementById('num_questions').innerHTML = num_questions;
     });
+    questions.catch(err => {
+        alert('Failed to fetch data from Open Trivia Database (It may be down currently).')
+    });
 }
 
 function answerQuestion(button){
